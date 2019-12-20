@@ -133,6 +133,7 @@ class NavBar extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMenuClose}
       >
+        <Link to="/Favs" style={{color: 'gray'}}>
         <MenuItem onClick={this.handleMobileMenuClose}>
           <IconButton color="inherit">
             <Badge badgeContent={appState.favTracks.length} color="secondary">
@@ -141,6 +142,7 @@ class NavBar extends React.Component {
           </IconButton>
           <p>Favourites</p>
         </MenuItem>
+        </Link>
       </Menu>
     );
 

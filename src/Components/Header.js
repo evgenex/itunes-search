@@ -24,18 +24,28 @@ const styles = theme => ({
     justifyContent: 'space-between',
   },
   logos: {
+    display: 'flex',
     flexGrow: 1,
     padding: theme.spacing.unit * 2,
-    display: 'flex',
     justifyContent: 'space-between',
   },
   logo: {
-    height: '50px'
+    height: '30px',
+    marginTop: '-10px',
+    [theme.breakpoints.up('sm')]: {
+      height: '50px',
+    },
+    
   },
   itunesLogo: {
-    height: '60px', 
-    marginTop: '-5px'
-  }
+    height: '35px',
+    marginTop: '-15px',
+    [theme.breakpoints.up('sm')]: {
+      height: '60px',
+      marginTop: '-5px',
+    },
+    
+  },
 });
 
 
