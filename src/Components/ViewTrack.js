@@ -32,9 +32,11 @@ const styles = theme => ({
   },
   media: {
     height: 300,
+    textAlign: 'center'
   },
   audio: {
-    padding: theme.spacing.unit * 2,
+    //padding: theme.spacing.unit * 2,
+    width: '100%'
   }, 
   chip: {
     margin: theme.spacing.unit,
@@ -105,7 +107,7 @@ class ViewTrack extends Component {
               </div>
               :
               <div>
-                <video width="345" controls>
+                <video controls className={classes.audio}>
                     <source src={track.previewUrl} type="video/mp4"/>
                 </video>
               </div>
@@ -113,7 +115,6 @@ class ViewTrack extends Component {
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   {track.artistName}
-                  -{track.kind}
                 </Typography>
                 <Typography gutterBottom variant="h6" component="h4">
                   {track.trackName}
